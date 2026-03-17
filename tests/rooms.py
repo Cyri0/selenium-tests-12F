@@ -49,3 +49,14 @@ def third_room(driver):
     
     next_page_link = driver.find_element(By.XPATH, '//*[@id="root"]/main/div/a')
     next_page_link.click()
+
+def fourth_room(driver):
+    driver.implicitly_wait(5)
+    binary_number = driver.find_element(By.XPATH, '//*[@id="root"]/div/p[2]').get_attribute("textContent")
+    decimal_number = int(binary_number, 2)
+    
+    result_input = driver.find_element(By.XPATH, '//*[@id="root"]/div/label/input')
+    result_input.send_keys(decimal_number)
+
+    submit_button = driver.find_element(By.XPATH, '//*[@id="root"]/div/button')
+    submit_button.click()
