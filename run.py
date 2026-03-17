@@ -3,7 +3,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 
-from tests.rooms import first_room, second_room, third_room, fourth_room
+from tests.rooms import first_room, second_room, third_room, fourth_room, fifth_room
 
 def get_driver(headless=False):
     options = Options()
@@ -24,7 +24,7 @@ def start_bot():
     second_room(driver)
     third_room(driver)
     fourth_room(driver)
-    
+    fifth_room(driver)
     # driver.quit()
 
 start_bot()
